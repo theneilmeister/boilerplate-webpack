@@ -31,5 +31,5 @@
 	}
 
 
-	renderReadMe();
-	// renderMustacheButtonDemo();
+	// renderReadMe();
+	renderMustacheButtonDemo();
