@@ -43,7 +43,7 @@ if (production) {
             mangle:   true,
             compress: {
                 warnings: false, // Suppress uglification warnings
-            },
+            }
         }),
 
         // This plugins defines various variables that we can set to false
@@ -70,7 +70,7 @@ var webpackConfig = {
 
     output: {
         path:          'builds',
-	    filename:      production ? '[name]-[hash].js' : 'bundle.js',
+	    filename:      'bundle.js',
 	    chunkFilename: '[name]-[chunkhash].js',
 	    publicPath:    'builds/'
     },

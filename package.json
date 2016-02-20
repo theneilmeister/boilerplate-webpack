@@ -7,7 +7,8 @@
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
     "build": "NODE_ENV=production webpack",
-    "profile": "webpack --profile --json > stats.json"
+    "profile": "webpack --profile --json > stats.json",
+    "dist": "gulp dist"
   },
   "author": "Neil A Smith",
   "license": "BSD-2-Clause",
@@ -26,6 +27,9 @@
     "express-http-proxy": "^0.3.1",
     "extract-text-webpack-plugin": "^0.3.8",
     "file-loader": "^0.8.5",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.5.0",
     "html-loader": "~0.4.3",
     "html-webpack-plugin": "^1.1.0",
     "jsx-loader": "^0.12.2",
