@@ -11,7 +11,7 @@ A simple webpack boilerplate with hot loading and ES6
 
 # Installation
 
-	- git clone [repo-url]
+	- git clone https://github.com/theneilmeister/boilerplate-webpack.git
 	- npm install
 
 
