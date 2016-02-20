@@ -9,6 +9,9 @@ A simple webpack boilerplate with hot loading and ES6
 	- JSX
 	- Marked (Markdown to HTML)
 	- ESLint
+	- React-JS
+	- React-Router
+	- Super Agent (for async requests)
 
 
 # Installation

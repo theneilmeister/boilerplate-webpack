@@ -1,25 +1,14 @@
-/*
-	app handler
-*/
+import $ from 'jquery';
+import marked from 'marked';
+import './styles.scss';
 
-	// includes
-	import $ from 'jquery';
-	import marked from 'marked';
-	import './styles.scss';
+var React = require('react');
+var routes = require('./routes');
+var Router = require('react-router');
 
-
-	function renderReadMe () {
-
-		$('body').load('./README.md', function (response, status, xhr) {
-
-			switch (status) {
-				case 'success': this[0].innerHTML = marked(response); break;
-				default: this[0].innerHTML = 'Unable to load file';
-			}
-
-		});
-
-	}
+var location = history.pushState ? Router.HistoryLocation : Router.HashLocation;
 
 
-	renderReadMe();
+Router.run(routes, location, function (Handler, location) {
+    React.render(<Handler location={location} />, document.getElementById('app'));
+});
