@@ -5,7 +5,6 @@
 	// includes
 	import $ from 'jquery';
 	import marked from 'marked';
-	import Button from './Components/Button';
 	import './styles.scss';
 
 
@@ -23,13 +22,4 @@
 	}
 
 
-	function renderMustacheButtonDemo () {
-
-		const button = new Button('Google', 'http://google.com');
-		button.render('body');
-
-	}
-
-
-	// renderReadMe();
-	renderMustacheButtonDemo();
+	renderReadMe();

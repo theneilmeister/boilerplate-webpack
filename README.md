@@ -9,7 +9,6 @@ A simple webpack boilerplate with hot loading and ES6
 	- JSX
 	- Marked (Markdown to HTML)
 	- ESLint
-	- Mustache
 
 
 # Installation
