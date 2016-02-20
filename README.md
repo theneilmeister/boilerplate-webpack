@@ -20,6 +20,6 @@ A simple webpack boilerplate with hot loading and ES6
 
 # Usage
 
-	- npm start
-	- npm build
-	- Then open a browser to http://localhost:8080
+	- npm start 			for web-dev-server, then open a browser to http://localhost:8080
+	- npm run build			for production
+	- npm run profile 		to generate stats.json

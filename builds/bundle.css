@@ -1,3 +1,15 @@
+.button {
+  float: left;
+  background-color: tomato;
+  color: white;
+  padding: 8px 15px 8px 15px;
+  border-radius: 8px;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer; }
+
+.button:hover {
+  background-color: lightgreen; }
 body {
   font-family: sans-serif;
   background: #fefefe; }
