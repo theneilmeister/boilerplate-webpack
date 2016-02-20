@@ -7,6 +7,8 @@ A simple webpack boilerplate with hot loading and ES6
 	- SCSS
 	- ES6 (babel)
 	- JSX
+	- Marked (Markdown to HTML)
+	- ESLint
 
 
 # Installation

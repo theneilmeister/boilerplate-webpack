@@ -82,6 +82,14 @@ var webpackConfig = {
     plugins: plugins,
 
     module: {
+
+        preLoaders: [
+            {
+                test: /\.js/,
+                loader: 'eslint'
+            }
+        ],
+
         loaders: [
 
 			{

@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\n__webpack_require__(1);\n\nvar _jquery = __webpack_require__(5);\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconsole.debug('app.js loaded!', _jquery2.default);\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/app.js\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/app.js?");
+	eval("\"use strict\";\n\n__webpack_require__(1);\n\nvar _jquery = __webpack_require__(5);\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/app.js\n ** module id = 0\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ },
 /* 1 */

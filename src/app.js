@@ -1,4 +1,19 @@
-import './styles.scss';
-import $ from 'jquery';
+/*
+	app handler
+*/
 
-// console.debug('app.js loaded!');
+	// includes
+	import $ from 'jquery';
+	import marked from 'marked';
+	import './styles.scss';
+
+	
+	// load README.db
+	$('body').load('./README.md', function (response, status, xhr) {
+
+		switch (status) {
+			case 'success': this[0].innerHTML = marked(response); break;
+			default: this[0].innerHTML = 'Unable to load file';
+		}
+
+	});
