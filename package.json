@@ -1,7 +1,8 @@
 {
   "name": "boilerplate-webpack",
   "version": "1.0.0",
-  "description": "Webpack Module Builder",
+  "description": "A simple webpack boilerplate with hot loading and ES6",
+  "git": "https://github.com/theneilmeister/boilerplate-webpack.git",
   "main": "src/app.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
