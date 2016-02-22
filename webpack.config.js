@@ -69,7 +69,7 @@ var webpackConfig = {
     entry:  	'./src/app.js',
 
     output: {
-        pat/h:          'builds',
+        path:          'builds',
 	    filename:      'bundle.js',
 	    chunkFilename: '[name]-[chunkhash].js',
 	    publicPath:    'builds/'
