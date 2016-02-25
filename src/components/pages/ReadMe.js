@@ -1,11 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router'
 import StyleSheet from 'react-style'
 import $ from 'jquery'
 import marked from 'marked'
 
+var css, images = {};
 
-const HomePage = React.createClass({
+
+var ReadMe = React.createClass({
 
     contextTypes: {
         // router: React.PropTypes.func
@@ -31,10 +32,7 @@ const HomePage = React.createClass({
 	render () {
 		return (
 			<div className="readme-container">
-				<h1>boilerplate-webpack</h1>
-                <p>A simple webpack boilerplate with hot loading and ES6</p>
-                <br />
-                <Link to="readme">ReadMe</Link>
+				<p>Loading README.md</p>
 			</div>
 		)
   	}
@@ -42,4 +40,4 @@ const HomePage = React.createClass({
 })
 
 
-export default HomePage
+export default ReadMe

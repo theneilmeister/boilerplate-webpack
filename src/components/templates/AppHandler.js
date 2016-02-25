@@ -1,29 +1,22 @@
-var StyleSheet = require('react-style');
-var React = require('react');
-var Router = require('react-router');
-var { RouteHandler } = Router;
-var css = {};
-var images = {};
+import React from 'react'
+import {Link} from 'react-router'
+import StyleSheet from 'react-style'
 
 
-var AppHandler = React.createClass({
+const AppHandler = React.createClass({
 
-    contextTypes: {
-        router: React.PropTypes.func
-    },
-
-    render: function() {
+    render () {
         return (
-            <div styles={[css.container]}>
-                <RouteHandler location={this.props.location} />
+            <div>
+                {this.props.children}
             </div>
-        );
-
+        )
     }
 
-});
+})
 
-css = StyleSheet.create({
+
+const css = StyleSheet.create({
     
     container: {
         position: 'relative',
@@ -34,4 +27,4 @@ css = StyleSheet.create({
 });
 
 
-module.exports = AppHandler;
+export default AppHandler;

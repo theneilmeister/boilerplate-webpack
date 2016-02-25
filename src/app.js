@@ -1,14 +1,34 @@
-import $ from 'jquery';
-// import marked from 'marked';
-// import './styles.scss';
+import React from 'react'
 
-// var React = require('react');
-// var routes = require('./routes');
-// var Router = require('react-router');
+import {Router, 
+		Route, 
+		IndexRoute, 
+		Redirect, 
+		Link, 
+		IndexLink, 
+		hashHistory, 
+		browserHistory,
+		DefaultRoute} from 'react-router'
 
-// var location = history.pushState ? Router.HistoryLocation : Router.HashLocation;
+import AppHandler from './components/templates/AppHandler'
+import HomePage from './components/pages/HomePage'
+import ReadMe from './components/pages/ReadMe'
 
 
-// Router.run(routes, location, function (Handler, location) {
-//     React.render(<Handler location={location} />, document.getElementById('app'));
-// });
+React.render((
+	<Router history={browserHistory}>
+
+
+
+		<Route path="/" component={AppHandler}>
+
+			<IndexRedirect to="home" />
+			<Route path="home" component={HomePage} />
+			<Route path="readme" component={ReadMe} />
+
+		</Route>
+
+
+
+	</Router>
+), document.body)
