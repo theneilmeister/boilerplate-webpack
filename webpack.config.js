@@ -6,6 +6,8 @@ var production = process.env.NODE_ENV === 'production';
 
 var plugins = [
 
+    new webpack.optimize.UglifyJsPlugin(),
+
 	new ExtractPlugin('bundle.css'), // <=== where should content be piped
 
     new webpack.optimize.CommonsChunkPlugin({
@@ -65,8 +67,9 @@ if (production) {
 var webpackConfig = {
 
 	debug:   	!production,
-    devtool: 	production ? false : 'eval',
-    entry:  	'./src/app.js',
+    // devtool: 	production ? false : 'eval',
+    devtool: 'source-map',
+    entry:  	'./src/app.ts',
 
     output: {
         path:          'builds',
@@ -77,6 +80,10 @@ var webpackConfig = {
 
     devServer: {
         hot: true
+    },
+
+    resolve: {
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
     },
 
     plugins: plugins,
@@ -91,6 +98,11 @@ var webpackConfig = {
         ],
 
         loaders: [
+
+            {
+                test: /\.ts$/,
+                loader: 'ts-loader'
+            },
 
 			{
 				test: /\.jsx?$/,
