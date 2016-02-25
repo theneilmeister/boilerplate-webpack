@@ -6,8 +6,6 @@ var production = process.env.NODE_ENV === 'production';
 
 var plugins = [
 
-    new webpack.optimize.UglifyJsPlugin(),
-
 	new ExtractPlugin('bundle.css'), // <=== where should content be piped
 
     new webpack.optimize.CommonsChunkPlugin({
