@@ -76,7 +76,8 @@ var webpackConfig = {
     },
 
     devServer: {
-        hot: true
+        hot: true,
+        inline: true
     },
 
     plugins: plugins,
