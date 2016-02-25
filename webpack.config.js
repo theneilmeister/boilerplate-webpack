@@ -8,6 +8,8 @@ var plugins = [
 
 	new ExtractPlugin('bundle.css'), // <=== where should content be piped
 
+    new webpack.HotModuleReplacementPlugin(),
+
     new webpack.optimize.CommonsChunkPlugin({
         name:      'main', // Move dependencies to our main file
         children:  true, // Look for common dependencies in all children,
@@ -66,7 +68,7 @@ var webpackConfig = {
 
 	debug:   	!production,
     devtool: 	production ? false : 'eval',
-    entry:  	'./src/app.js',
+    entry:  	['webpack/hot/dev-server', './src/app.js'],
 
     output: {
         path:          'builds',
