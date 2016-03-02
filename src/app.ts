@@ -1,9 +1,38 @@
-import greeter = require('./modules/greeter');  
-import $ = require('jquery');
-import Student from './classes/Student';
+import Backbone = require('backbone');
 
-var user = new Student("Jane", "M.", "User");
 
-$(() => {
-  $(document.body).html(greeter(user));
-});
+class AppRouter extends Backbone.Router {
+
+    constructor(options?: Backbone.RouterOptions) {
+
+    	super(options);
+
+	    this.routes = {
+	    	"": "defaultRoute",
+            "test": "testRoute"
+        }
+
+    	Backbone.Router.apply(this, arguments);
+
+    }
+
+    initialize() {
+        // can put more init code here to run after constructor
+        console.log('AppRouter initialised..');
+    }
+
+    defaultRoute() {
+    	console.debug('default route hit');
+    }
+
+    testRoute() {
+    	console.debug('test route hit');
+    }
+
+}
+
+
+var app_router = new AppRouter();
+
+
+Backbone.history.start();
