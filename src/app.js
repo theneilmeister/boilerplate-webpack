@@ -1,25 +1,9 @@
-/*
-	app handler
-*/
+import $ from 'jquery';
+import ko from 'knockout';
+import './styles.scss';
 
-	// includes
-	import $ from 'jquery';
-	import marked from 'marked';
-	import './styles.scss';
+import './components/test-component';
 
 
-	function renderReadMe () {
-
-		$('body').load('./README.md', function (response, status, xhr) {
-
-			switch (status) {
-				case 'success': this[0].innerHTML = marked(response); break;
-				default: this[0].innerHTML = 'Unable to load file';
-			}
-
-		});
-
-	}
-
-
-	renderReadMe();
+ 
+ko.applyBindings();
