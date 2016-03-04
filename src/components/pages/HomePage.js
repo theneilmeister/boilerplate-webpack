@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router'
-import StyleSheet from 'react-style'
 import $ from 'jquery'
 import marked from 'marked'
 
@@ -15,16 +14,16 @@ const HomePage = React.createClass({
         // this.context.router.transitionTo('/homepage');
     },
 
-    componentDidMount: function () {
+    loadReadme: function () {
 
-         $('.readme-container').load('./README.md', function (response, status, xhr) {
+         // $('.readme-container').load('./README.md', function (response, status, xhr) {
 
-             switch (status) {
-                 case 'success': this[0].innerHTML = marked(response); break;
-                 default: this[0].innerHTML = '<p>Unable to load file</p>';
-             }
+         //     switch (status) {
+         //         case 'success': this[0].innerHTML = marked(response); break;
+         //         default: this[0].innerHTML = '<p>Unable to load file</p>';
+         //     }
 
-         });
+         // });
 
     },
 	
@@ -34,7 +33,7 @@ const HomePage = React.createClass({
 				<h1>boilerplate-webpack</h1>
                 <p>A simple webpack boilerplate with hot loading and ES6</p>
                 <br />
-                <Link to="readme">ReadMe</Link>
+                <Link to="about">About Page</Link>
 			</div>
 		)
   	}

@@ -1,34 +1,22 @@
 import React from 'react'
-
-import {Router, 
-		Route, 
-		IndexRoute, 
-		Redirect, 
-		Link, 
-		IndexLink, 
-		hashHistory, 
-		browserHistory,
-		DefaultRoute} from 'react-router'
+import { render } from 'react-dom'
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router'
 
 import AppHandler from './components/templates/AppHandler'
+import NoMatch from './components/pages/404'
 import HomePage from './components/pages/HomePage'
-import ReadMe from './components/pages/ReadMe'
+import AboutPage from './components/pages/AboutPage'
 
 
-React.render((
-	<Router history={browserHistory}>
+render((
+  <Router history={browserHistory}>
+    <Route path="/" component={AppHandler}>
+      
+		<IndexRoute component={HomePage} />
+		<Route path="about" component={AboutPage} />
 
-
-
-		<Route path="/" component={AppHandler}>
-
-			<IndexRedirect to="home" />
-			<Route path="home" component={HomePage} />
-			<Route path="readme" component={ReadMe} />
-
-		</Route>
-
-
-
-	</Router>
-), document.body)
+		<Route path="*" component={NoMatch}/>
+      
+    </Route>
+  </Router>
+), document.getElementById('app'))
