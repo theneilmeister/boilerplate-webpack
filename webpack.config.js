@@ -68,7 +68,12 @@ var webpackConfig = {
 
 	debug:   	!production,
     devtool: 	production ? false : 'eval',
-    entry:  	['webpack/hot/dev-server', './src/app.js'],
+    entry: [
+        'webpack-dev-server/client?http://0.0.0.0:3000',
+        'webpack/hot/only-dev-server',
+        // 'webpack/hot/dev-server',
+        './src/app.js'
+    ],
 
     output: {
         path:          'builds',
